@@ -75,20 +75,12 @@
 		93F95E43290B05C50030B62D /* Moonshot */ = {
 			isa = PBXGroup;
 			children = (
+				93FC584E293500530012A5D2 /* Model */,
+				93FC584D2934FFA70012A5D2 /* Data */,
+				93FC584C2934FF4A0012A5D2 /* Extensions */,
+				93FC584B2934E0360012A5D2 /* View */,
 				93F95E44290B05C50030B62D /* MoonshotApp.swift */,
 				93F95E46290B05C50030B62D /* ContentView.swift */,
-				9370566B2919721F00FA677C /* GridLayoutView.swift */,
-				9370566D2919734100FA677C /* ListLayoutView.swift */,
-				93CC52C7290D08F300F92B4B /* AstronautView.swift */,
-				93CC52C5290CE0C300F92B4B /* MissionView.swift */,
-				9320A2AA2918B550008689D0 /* CrewMemberView.swift */,
-				9320A2AC2918C6D9008689D0 /* DivisorView.swift */,
-				939B32BF290C0D6E002433FF /* Astronaut.swift */,
-				939B32C3290C1C91002433FF /* Mission.swift */,
-				93CC52C3290C927F00F92B4B /* Color-Theme.swift */,
-				939B32C1290C11CC002433FF /* Bundle-Decodable.swift */,
-				939B32BB290C0C4E002433FF /* astronauts.json */,
-				939B32BC290C0C4E002433FF /* missions.json */,
 				93F95E48290B05C60030B62D /* Assets.xcassets */,
 				93F95E4A290B05C60030B62D /* Preview Content */,
 			);
@@ -101,6 +93,46 @@
 				93F95E4B290B05C60030B62D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		93FC584B2934E0360012A5D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93CC52C7290D08F300F92B4B /* AstronautView.swift */,
+				9320A2AA2918B550008689D0 /* CrewMemberView.swift */,
+				9320A2AC2918C6D9008689D0 /* DivisorView.swift */,
+				9370566B2919721F00FA677C /* GridLayoutView.swift */,
+				9370566D2919734100FA677C /* ListLayoutView.swift */,
+				93CC52C5290CE0C300F92B4B /* MissionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93FC584C2934FF4A0012A5D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				93CC52C3290C927F00F92B4B /* Color-Theme.swift */,
+				939B32C1290C11CC002433FF /* Bundle-Decodable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		93FC584D2934FFA70012A5D2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				939B32BB290C0C4E002433FF /* astronauts.json */,
+				939B32BC290C0C4E002433FF /* missions.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		93FC584E293500530012A5D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				939B32BF290C0D6E002433FF /* Astronaut.swift */,
+				939B32C3290C1C91002433FF /* Mission.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

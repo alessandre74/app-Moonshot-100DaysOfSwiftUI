@@ -18,14 +18,15 @@ struct ListLayoutView: View {
                 NavigationLink {
                     MissionView(mission: mission, astronauts: astronauts)
                 } label: {
-                    VStack {
+                    HStack {
                         Image(mission.image)
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 100, height: 100)
-                            .padding()
+                            .frame(width: 40, height: 40)
+                            .padding(.vertical, 8)
+                            .padding(.horizontal, 20)
 
-                        VStack {
+                        HStack {
                             Text(mission.displayname)
                                 .font(.headline)
                                 .foregroundColor(.white)
@@ -33,9 +34,9 @@ struct ListLayoutView: View {
                             Text(mission.formattedLaunchDate)
                                 .font(.caption)
                                 .foregroundColor(.white.opacity(0.5))
+                                .frame(width: 100)
                         }
-                        .padding(.vertical)
-                        .frame(maxWidth: .infinity)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .background(.lightBackground)
                     }
                     .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -45,6 +46,7 @@ struct ListLayoutView: View {
                     )
                 }
             }
+            .padding(.vertical, 1)
             .listRowSeparator(.hidden)
             .listRowBackground(Color.darkBackground)
         }

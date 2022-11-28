@@ -12,26 +12,29 @@ struct MissionView: View {
         let role: String
         let astronaut: Astronaut
     }
-   
+
     let mission: Mission
     let crew: [CrewMember]
 
     var body: some View {
         GeometryReader { geometry in
-            ScrollView (showsIndicators: false) {
+            ScrollView(showsIndicators: false) {
                 VStack {
                     Image(mission.image)
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width * 0.6)
                         .padding([.top, .bottom])
-                    
-                    Text(mission.formattedLaunchDate)
-                        .font(.headline)
-                        .foregroundColor(.white)
-                
+
+                    HStack {
+                        Image(systemName: mission.missionFormattedLaunchDate != "N/A" ? "calendar" : "")
+
+                        Text(mission.missionFormattedLaunchDate)
+                            .font(.headline)
+                            .foregroundColor(.white)
+                    }
+
                     VStack(alignment: .leading) {
-                        
                         DivisorView()
 
                         Text("Mission Highlights")
@@ -59,7 +62,7 @@ struct MissionView: View {
 
     init(mission: Mission, astronauts: [String: Astronaut]) {
         self.mission = mission
-        self.crew = mission.crew.map { menber in
+        crew = mission.crew.map { menber in
             if let astronaut = astronauts[menber.name] {
                 return CrewMember(role: menber.role, astronaut: astronaut)
             } else {
